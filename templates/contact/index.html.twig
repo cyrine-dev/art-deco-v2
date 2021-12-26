@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact us - Art Deco{% endblock %}
+
+{% block content %}
+   
+    <div class="container">
+        <h2>Contact form</h2>
+        {% for message in app.flashes('notice') %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+        <div class="row">
+            <div class="col-sm-8">
+                {{ form(form) }}
+            </div>
+            
+            <div class="col-sm-4">
+           
+            <table border="0">
+               <tr>
+                <th><strong>Art Deco</strong> </th>
+               </tr>
+               <tr>
+                 <td>Adresse: Tunisia</td>
+               </tr>
+               <tr>
+                 <td> Call us :  +216  12 345 678</td>
+               </tr>
+               <tr>
+                 <td>Send us an e-mail: hello@Art_Deco.com</td>
+               </tr>
+            </table>
+            <hr>
+            <p> <strong>Do not hesite to contact our team, we will answer you as soon as possible</strong> </p>
+
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

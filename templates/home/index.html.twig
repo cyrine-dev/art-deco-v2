@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}
+{% endblock %}
+
+{% block content %}   
+
+    
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">A professionals team <span class="text-muted">with great know-how.</span></h2>
+            <hr class="featurette-divider">
+            
+        </div>
+        <div class="col-md-5">
+            <img src="{{ asset('assets/img/first.png') }}" class="img-fluid" alt="American know-how">
+          
+        </div>
+       
+    </div>
+    
+    <h2>Our best product</h2>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-md-3">
+                {% include 'product/single_product.html.twig' %}
+            </div>
+        {% endfor %}
+    </div>
+    <hr class="featurette-divider">
+    <div class="col-m-10">
+            <center>
+                <p class="featurette-heading"> Choose Art Deco, the best way for en ligne shopping.</p>
+
+                <hr class="featurette-divider">
+            </center>
+    </div>
+{% endblock %}

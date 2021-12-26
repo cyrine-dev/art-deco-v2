@@ -1,0 +1,116 @@
+{% extends "@EasyAdmin/layout.html.twig" %}
+
+{% block content %}
+
+    <div class="jumbotron">
+        <h1 class="display-4">Administration</h1>
+        <p class="lead">Welcome to Administration interface !</p>
+        <!-- Overview -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Text -->
+                        <div class="row align-items-center mb-6 mb-md-8">
+                            <div class="col-auto">
+                                <!-- Heading -->
+                                <h6 class="fw-bold text-uppercase text-muted mb-0">
+                                Overview
+                                </h6>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </div> <!-- / .row -->
+                <br/>
+                <div class="row">
+                <!-- User -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <!-- Card -->
+                        <div class="card card-border border-info shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg m-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-body text-center my-auto">
+                                <!-- Heading -->
+                                <h4 class="fw-bold">Users</h4>
+                                <!-- Text -->
+                                <p class="text-gray-700 mb-5">All users</p>
+                                <!-- Badge -->
+                                <span class="badge rounded-pill bg-dark-soft">
+                                    <span class="h6 text-uppercase">{{ users }} entries</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Orders -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <!-- Card -->
+                        <div class="card card-border border-info shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg m-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-body text-center my-auto">
+                                <!-- Heading -->
+                                <h4 class="fw-bold">Orders</h4>
+                                <!-- Text -->
+                                <p class="text-gray-700 mb-5">All exsited orders</p>
+                                <!-- Badge -->
+                                <span class="badge rounded-pill bg-dark-soft">
+                                    <span class="h6 text-uppercase">{{ orders }} orders</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- Categories -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <!-- Card -->
+                        <div class="card card-border border-info shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg m-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-body text-center my-auto">
+                                <!-- Heading -->
+                                <h4 class="fw-bold">Categories</h4>
+                                <!-- Text -->
+                                <p class="text-gray-700 mb-5">All Categories</p>
+                                <!-- Badge -->
+                                <span class="badge rounded-pill bg-dark-soft">
+                                    <span class="h6 text-uppercase">{{ categories }} entries</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Products -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <!-- Card -->
+                        <div class="card card-border border-info shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg m-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-body text-center my-auto">
+                                <!-- Heading -->
+                                <h4 class="fw-bold">Products</h4>
+                                <!-- Text -->
+                                <p class="text-gray-700 mb-5">All Products</p>
+                                <!-- Badge -->
+                                <span class="badge rounded-pill bg-dark-soft">
+                                    <span class="h6 text-uppercase">{{ products }} entries</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Carries -->
+                    <div class="col-12 col-md-6 col-lg-4 ">
+                        <!-- Card -->
+                        <div class="card card-border border-info shadow-lg mb-6 mb-md-8 mb-lg-0 lift lift-lg m-2" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card-body text-center my-auto">
+                                <!-- Heading -->
+                                <h4 class="fw-bold">Carries</h4>
+                                <!-- Text -->
+                                <p class="text-gray-700 mb-5">All carries</p>
+                                <!-- Badge -->
+                                <span class="badge rounded-pill bg-dark-soft">
+                                    <span class="h6 text-uppercase">{{ carries }} entries</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div> <!-- / .row -->
+            </div>
+        </section>
+    </div>
+    
+{% endblock %}

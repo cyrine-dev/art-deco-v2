@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Hello ProductController!{% endblock %} #}
+
+{% block content %}
+    <div class="row">
+        
+        <div class="col-md-10">
+            <center>
+              <h3>Our Products</h3>
+            </center>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-md-4">
+                        {% include 'product/single_product.html.twig' %}
+                    </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+        <div class="col-md-2">
+            <h3>Filter By Category</h3>
+            {{ form(form) }}
+        </div>
+    </div>
+
+{% endblock %}

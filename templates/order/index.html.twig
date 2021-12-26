@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Submit my order - Art Deco{% endblock %}
+
+{% block content %}
+    <h2>Submit my order</h2>
+    <p>Choose your preferences before placing the order on Art Deco</p>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            {% set formHtml %}
+                {{ form_start(form, {action:path('order_recap')}) }}
+                    {{ form_label(form.addresses, 'Choose your shipping address') }}
+                    <a href="{{ path('account_address_add') }}">Add a new address</a>
+                {{ form_end(form) }}
+            {% endset %}
+            {{ formHtml|replace({'[br]' : '<br/>'})|raw }}
+        </div>
+        <div class="col-md-6">
+            <div class="text-center">
+                <b>Order recap</b>
+                <p>Find here the summary of your order</p>
+            </div>
+            <div class="order-summary">
+                {% for key,product in cart %}
+                    <div class="row {% if key > 0 %}mt-2{% endif %}">
+                        <div class="col-2">
+                            <img src="/uploads/{{product.product.illustration}}" alt="{{product.product.name}}" height="75px">
+                        </div>
+                        <div class="col-8 my-auto">
+                            {{ product.product.name }}</br>
+                            <small>{{product.product.subtitle}}</small>
+                        </div>
+                        <div class="col-2 my-auto">
+                            x {{ product.quantity }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
