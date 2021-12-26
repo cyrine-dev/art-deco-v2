@@ -38,6 +38,7 @@ class OrderCrudController extends AbstractCrudController
         $updatePreparation = Action::new('updatePreparation', 'Preparation in progress', 'fas fa-box-open')->linkToCrudAction('updatePreparation');
         $updateDelivery = Action::new('updateDelivery', 'Delivery in progress', 'fas fa-truck')->linkToCrudAction('updateDelivery');
         return $actions
+            ->disable(Action::NEW, Action::DELETE, Action::EDIT)
             ->add('detail', $updatePreparation)
             ->add('detail', $updateDelivery)
             ->add('index', 'detail');
